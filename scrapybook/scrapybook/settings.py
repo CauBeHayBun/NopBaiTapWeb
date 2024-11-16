@@ -92,13 +92,13 @@ REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
 
-ITEM_PIPELINES = {
-    'scrapybook.pipelines.CSVDBmyscrapybookPipeline': 100,
-    'scrapybook.pipelines.JsonDBmyscrapybookPipeline': 200,
-    'scrapybook.pipelines.MongoDBmyscrapybookPipeline': 300,
-}
 
 
 # Không cần đặt trực tiếp MONGO_URI ở đây vì đã lấy từ biến môi trường trong pipelines.py
 
 
+ITEM_PIPELINES = {
+    'scrapybook.pipelines.CSVDBmyscrapybookPipeline': 100,
+    'scrapybook.pipelines.JsonDBmyscrapybookPipeline': 200,
+    'scrapybook.pipelines.MongoDBmyscrapybookPipeline': 300,
+}

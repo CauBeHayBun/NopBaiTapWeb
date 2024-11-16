@@ -11,5 +11,6 @@ class MyscraptbookCrawlerItem(scrapy.Item):
     nhaxuatban = scrapy.Field()    # Nhà xuất bản
     sotrang = scrapy.Field()      # Số trang
     trongluong = scrapy.Field()   # Trọng lượng
+    ngayxuatban = scrapy.Field() # Nội dung brand
     noidung_brand = scrapy.Field() # Nội dung brand
 

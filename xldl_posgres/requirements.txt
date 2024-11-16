@@ -1,1 +1,10 @@
 # To ensure app dependencies are ported from your virtual environment/host machine into your container, run 'pip freeze > requirements.txt' in the terminal to overwrite this file
+pandas
+psycopg2-binary
+pymongo
+sqlalchemy
+kafka-python
+six>=1.10.0
+python-snappy
+confluent_kafka
+openpyxl

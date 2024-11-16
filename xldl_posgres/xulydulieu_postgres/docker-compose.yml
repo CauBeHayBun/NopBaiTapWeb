@@ -1,28 +1,15 @@
-version: '3'
+version: '3.8'
 services:
-  db:
-    image: postgres
+  postgres:
+    image: postgres:latest
+    container_name: postgres_container
     environment:
-      POSTGRES_DB: dbmyscrapybook
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: dbmyscrapybook  # Tên cơ sở dữ liệu bạn muốn tạo
+      POSTGRES_USER: postgres        # Tên người dùng
+      POSTGRES_PASSWORD: 123         # Mật khẩu cho người dùng
     ports:
       - "5432:5432"
-    volumes:
-      - db-data:/var/lib/postgresql/data
-
-  app:
-    build: .
-    depends_on:
-      - db
-    environment:
-      - DATABASE_HOST=db
-      - DATABASE_PORT=5432
-      - DATABASE_USER=postgres
-      - DATABASE_PASSWORD=123
-    volumes:
-      - .:/usr/src/app
-    command: python app.py
-
-volumes:
-  db-data:
+    networks:
+      - trienkhai
+networks:
+  trienkhai:

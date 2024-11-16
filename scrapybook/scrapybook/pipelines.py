@@ -28,6 +28,7 @@ class JsonDBmyscrapybookPipeline:
             file.write(line)
         return item
 
+
 class CSVDBmyscrapybookPipeline:
     '''
     Mỗi thông tin cách nhau với dấu $.
@@ -47,6 +48,7 @@ class CSVDBmyscrapybookPipeline:
                 item.get('nhaxuatban', ''),
                 item.get('sotrang', ''),
                 item.get('trongluong', ''),
+                item.get('ngayxuatban', ''),
                 item.get('noidung_brand', ''),
             ])
         return item
